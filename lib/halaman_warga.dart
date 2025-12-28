@@ -121,12 +121,15 @@ class _HalamanWargaState extends State<HalamanWarga> {
       body: Column(
         children: [
           Expanded(
-            child: ListView.builder(
-        padding: const EdgeInsets.all(15),
-        itemCount: _dataWarga.length,
-        itemBuilder: (context, index) {
-          final item = _dataWarga[index];
-          return Card(
+            child: CustomScrollView(
+              slivers: [
+                SliverPadding(
+                  padding: const EdgeInsets.all(15),
+                  sliver: SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) {
+                        final item = _dataWarga[index];
+                        return Card(
             elevation: 2,
             margin: const EdgeInsets.only(bottom: 10),
             child: ListTile(
@@ -164,10 +167,17 @@ class _HalamanWargaState extends State<HalamanWarga> {
               ),
             ),
           );
-        },
-      ),
+                      },
+                      childCount: _dataWarga.length,
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: const FooterRW(),
+                ),
+              ],
+            ),
           ),
-          const FooterRW(),
         ],
       ),
     );

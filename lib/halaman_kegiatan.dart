@@ -22,16 +22,16 @@ class HalamanKegiatan extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ListView(
-        padding: const EdgeInsets.all(15),
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          _itemEvent("Kerja Bakti Masal", "Minggu, 24 Des 2025", "07:00 WIB", "Lapangan RW", true),
-          _itemEvent("Rapat Akhir Tahun", "Sabtu, 30 Des 2025", "19:30 WIB", "Balai Warga", true),
-          _itemEvent("Posyandu Bulanan", "Senin, 02 Jan 2026", "08:00 WIB", "Pos Kesehatan", false),
-        ],
-      ),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Column(
+                children: [
+                  _itemEvent("Kerja Bakti Masal", "Minggu, 24 Des 2025", "07:00 WIB", "Lapangan RW", true),
+                  _itemEvent("Rapat Akhir Tahun", "Sabtu, 30 Des 2025", "19:30 WIB", "Balai Warga", true),
+                  _itemEvent("Posyandu Bulanan", "Senin, 02 Jan 2026", "08:00 WIB", "Pos Kesehatan", false),
+                ],
+              ),
+            ),
             const FooterRW(),
           ],
         ),

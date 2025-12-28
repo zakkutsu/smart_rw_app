@@ -27,11 +27,15 @@ class DashboardRW extends StatelessWidget {
       ),
       
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // --- SECTION 1: STATISTIK RINGKAS ---
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // --- SECTION 1: STATISTIK RINGKAS ---
             const Text("Ringkasan Data", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             // Tampilan Responsif untuk Kartu Statistik
@@ -168,7 +172,9 @@ class DashboardRW extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 30),
-            
+                ],
+              ),
+            ),
             // Footer
             const FooterRW(),
           ],

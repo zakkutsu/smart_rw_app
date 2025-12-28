@@ -17,16 +17,16 @@ class HalamanPosyandu extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ListView(
-        padding: const EdgeInsets.all(15),
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          _itemBalita("Aisyah Humaira", "12 Bulan", "8.5 Kg", "Sehat"),
-          _itemBalita("Muhammad Fatih", "24 Bulan", "11 Kg", "Sehat"),
-          _itemBalita("Rizky Billar", "9 Bulan", "7.2 Kg", "Kurang Gizi", warning: true),
-        ],
-      ),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: Column(
+                children: [
+                  _itemBalita("Aisyah Humaira", "12 Bulan", "8.5 Kg", "Sehat"),
+                  _itemBalita("Muhammad Fatih", "24 Bulan", "11 Kg", "Sehat"),
+                  _itemBalita("Rizky Billar", "9 Bulan", "7.2 Kg", "Kurang Gizi", warning: true),
+                ],
+              ),
+            ),
             const FooterRW(),
           ],
         ),

@@ -36,14 +36,17 @@ class _HalamanSuratState extends State<HalamanSurat> {
       body: Column(
         children: [
           Expanded(
-            child: ListView.builder(
-        padding: const EdgeInsets.all(15),
-        itemCount: _listSurat.length,
-        itemBuilder: (context, index) {
-          final item = _listSurat[index];
-          Color warnaStatus = item['status'] == 'Disetujui' ? Colors.green : (item['status'] == 'Pending' ? Colors.orange : Colors.red);
+            child: CustomScrollView(
+              slivers: [
+                SliverPadding(
+                  padding: const EdgeInsets.all(15),
+                  sliver: SliverList(
+                    delegate: SliverChildBuilderDelegate(
+                      (context, index) {
+                        final item = _listSurat[index];
+                        Color warnaStatus = item['status'] == 'Disetujui' ? Colors.green : (item['status'] == 'Pending' ? Colors.orange : Colors.red);
           
-          return Card(
+                        return Card(
             elevation: 2,
             margin: const EdgeInsets.only(bottom: 10),
             child: ListTile(
@@ -64,10 +67,17 @@ class _HalamanSuratState extends State<HalamanSurat> {
               ),
             ),
           );
-        },
-      ),
+                      },
+                      childCount: _listSurat.length,
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: const FooterRW(),
+                ),
+              ],
+            ),
           ),
-          const FooterRW(),
         ],
       ),
     );

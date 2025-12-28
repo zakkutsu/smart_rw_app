@@ -50,16 +50,16 @@ class HalamanKeuangan extends StatelessWidget {
               child: Column(
                 children: [
                   ListView(
-              padding: const EdgeInsets.all(15),
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              children: [
-                _itemKas("Iuran Warga RT 01", "20 Des 2025", "+ Rp 1.500.000", true),
-                _itemKas("Perbaikan Lampu Jalan", "18 Des 2025", "- Rp 350.000", false),
-                _itemKas("Konsumsi Rapat RW", "15 Des 2025", "- Rp 150.000", false),
-                _itemKas("Donasi Hamba Allah", "10 Des 2025", "+ Rp 500.000", true),
-              ],
-            ),
+                    padding: const EdgeInsets.all(15),
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    children: [
+                      _itemKas("Iuran Warga RT 01", "20 Des 2025", "+ Rp 1.500.000", true),
+                      _itemKas("Perbaikan Lampu Jalan", "18 Des 2025", "- Rp 350.000", false),
+                      _itemKas("Konsumsi Rapat RW", "15 Des 2025", "- Rp 150.000", false),
+                      _itemKas("Donasi Hamba Allah", "10 Des 2025", "+ Rp 500.000", true),
+                    ],
+                  ),
                   const FooterRW(),
                 ],
               ),
