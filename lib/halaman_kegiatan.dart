@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'widgets/footer_rw.dart';
 
 class HalamanKegiatan extends StatelessWidget {
   const HalamanKegiatan({super.key});
@@ -18,13 +19,22 @@ class HalamanKegiatan extends StatelessWidget {
         backgroundColor: Colors.purple,
         child: const Icon(Icons.add, color: Colors.white),
       ),
-      body: ListView(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ListView(
         padding: const EdgeInsets.all(15),
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           _itemEvent("Kerja Bakti Masal", "Minggu, 24 Des 2025", "07:00 WIB", "Lapangan RW", true),
           _itemEvent("Rapat Akhir Tahun", "Sabtu, 30 Des 2025", "19:30 WIB", "Balai Warga", true),
           _itemEvent("Posyandu Bulanan", "Senin, 02 Jan 2026", "08:00 WIB", "Pos Kesehatan", false),
         ],
+      ),
+            const FooterRW(),
+          ],
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'widgets/footer_rw.dart';
 
 class HalamanWarga extends StatefulWidget {
   const HalamanWarga({super.key});
@@ -117,7 +118,10 @@ class _HalamanWargaState extends State<HalamanWarga> {
         backgroundColor: Colors.blue[800],
         foregroundColor: Colors.white,
       ),
-      body: ListView.builder(
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
         padding: const EdgeInsets.all(15),
         itemCount: _dataWarga.length,
         itemBuilder: (context, index) {
@@ -161,6 +165,10 @@ class _HalamanWargaState extends State<HalamanWarga> {
             ),
           );
         },
+      ),
+          ),
+          const FooterRW(),
+        ],
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'widgets/footer_rw.dart';
 
 class HalamanSurat extends StatefulWidget {
   const HalamanSurat({super.key});
@@ -32,7 +33,10 @@ class _HalamanSuratState extends State<HalamanSurat> {
         foregroundColor: Colors.white,
         leading: IconButton(onPressed: () => context.pop(), icon: const Icon(Icons.arrow_back)),
       ),
-      body: ListView.builder(
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
         padding: const EdgeInsets.all(15),
         itemCount: _listSurat.length,
         itemBuilder: (context, index) {
@@ -61,6 +65,10 @@ class _HalamanSuratState extends State<HalamanSurat> {
             ),
           );
         },
+      ),
+          ),
+          const FooterRW(),
+        ],
       ),
     );
   }

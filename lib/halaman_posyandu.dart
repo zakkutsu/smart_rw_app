@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'widgets/footer_rw.dart';
 
 class HalamanPosyandu extends StatelessWidget {
   const HalamanPosyandu({super.key});
@@ -13,13 +14,22 @@ class HalamanPosyandu extends StatelessWidget {
         foregroundColor: Colors.white,
         leading: IconButton(onPressed: () => context.pop(), icon: const Icon(Icons.arrow_back)),
       ),
-      body: ListView(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ListView(
         padding: const EdgeInsets.all(15),
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           _itemBalita("Aisyah Humaira", "12 Bulan", "8.5 Kg", "Sehat"),
           _itemBalita("Muhammad Fatih", "24 Bulan", "11 Kg", "Sehat"),
           _itemBalita("Rizky Billar", "9 Bulan", "7.2 Kg", "Kurang Gizi", warning: true),
         ],
+      ),
+            const FooterRW(),
+          ],
+        ),
       ),
     );
   }

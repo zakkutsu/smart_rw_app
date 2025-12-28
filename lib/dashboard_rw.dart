@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'widgets/footer_rw.dart';
 
 class DashboardRW extends StatelessWidget {
   const DashboardRW({super.key});
@@ -166,7 +167,10 @@ class DashboardRW extends StatelessWidget {
                 _tombolMenu(context, "Pengaturan", Icons.settings, Colors.grey),
               ],
             ),
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
+            
+            // Footer
+            const FooterRW(),
           ],
         ),
       ),

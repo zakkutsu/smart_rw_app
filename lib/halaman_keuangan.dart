@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'widgets/footer_rw.dart';
 
 class HalamanKeuangan extends StatelessWidget {
   const HalamanKeuangan({super.key});
@@ -45,14 +46,23 @@ class HalamanKeuangan extends StatelessWidget {
           ),
           // List Transaksi
           Expanded(
-            child: ListView(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  ListView(
               padding: const EdgeInsets.all(15),
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
               children: [
                 _itemKas("Iuran Warga RT 01", "20 Des 2025", "+ Rp 1.500.000", true),
                 _itemKas("Perbaikan Lampu Jalan", "18 Des 2025", "- Rp 350.000", false),
                 _itemKas("Konsumsi Rapat RW", "15 Des 2025", "- Rp 150.000", false),
                 _itemKas("Donasi Hamba Allah", "10 Des 2025", "+ Rp 500.000", true),
               ],
+            ),
+                  const FooterRW(),
+                ],
+              ),
             ),
           )
         ],
