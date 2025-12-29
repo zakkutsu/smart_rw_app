@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
-import 'widgets/footer_rw.dart';
+import '../../widgets/common/footer_rw.dart';
 
-class HalamanKeuangan extends StatelessWidget {
-  const HalamanKeuangan({super.key});
+class KeuanganScreen extends StatelessWidget {
+  const KeuanganScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'widgets/footer_rw.dart';
+import '../../widgets/common/footer_rw.dart';
 
-class HalamanSurat extends StatefulWidget {
-  const HalamanSurat({super.key});
+class SuratScreen extends StatefulWidget {
+  const SuratScreen({super.key});
 
   @override
-  State<HalamanSurat> createState() => _HalamanSuratState();
+  State<SuratScreen> createState() => _SuratScreenState();
 }
 
-class _HalamanSuratState extends State<HalamanSurat> {
+class _SuratScreenState extends State<SuratScreen> {
   // Data Dummy Surat
   final List<Map<String, String>> _listSurat = [
     {"nama": "Budi Santoso", "jenis": "Surat Pengantar SKCK", "tanggal": "20 Des 2025", "status": "Pending"},

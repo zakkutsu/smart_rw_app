@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'widgets/footer_rw.dart';
+import '../../widgets/common/footer_rw.dart';
 
-class HalamanKegiatan extends StatelessWidget {
-  const HalamanKegiatan({super.key});
+class KegiatanScreen extends StatelessWidget {
+  const KegiatanScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

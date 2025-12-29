@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'widgets/footer_rw.dart';
+import '../../widgets/common/footer_rw.dart';
 
-class HalamanPosyandu extends StatelessWidget {
-  const HalamanPosyandu({super.key});
+class PosyanduScreen extends StatelessWidget {
+  const PosyanduScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

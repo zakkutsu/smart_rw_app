@@ -1,10 +1,10 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'widgets/footer_rw.dart';
+import '../../widgets/common/footer_rw.dart';
 
-class DashboardRW extends StatelessWidget {
-  const DashboardRW({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

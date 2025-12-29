@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'widgets/footer_rw.dart';
+import '../../widgets/common/footer_rw.dart';
 
-class HalamanWarga extends StatefulWidget {
-  const HalamanWarga({super.key});
+class WargaScreen extends StatefulWidget {
+  const WargaScreen({super.key});
 
   @override
-  State<HalamanWarga> createState() => _HalamanWargaState();
+  State<WargaScreen> createState() => _WargaScreenState();
 }
 
-class _HalamanWargaState extends State<HalamanWarga> {
+class _WargaScreenState extends State<WargaScreen> {
   // DATA DUMMY (CRUD: Read)
   final List<Map<String, String>> _dataWarga = [
     {"nama": "Budi Santoso", "nik": "3201012002900001", "status": "Warga Tetap", "pekerjaan": "Wiraswasta"},
@@ -78,7 +78,7 @@ class _HalamanWargaState extends State<HalamanWarga> {
                 TextField(controller: kerjaCtrl, decoration: const InputDecoration(labelText: "Pekerjaan")),
                 const SizedBox(height: 10),
                 DropdownButtonFormField<String>(
-                  value: statusPilih,
+                  initialValue: statusPilih,
                   decoration: const InputDecoration(labelText: "Status Tinggal"),
                   items: ['Warga Tetap', 'Kontrak', 'Kost'].map((e) => DropdownMenuItem(value: e, child: Text(e))).toList(),
                   onChanged: (val) => setStateDialog(() => statusPilih = val!),
