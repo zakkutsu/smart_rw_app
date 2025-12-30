@@ -18,7 +18,7 @@ Bagian dari Ekosistem **Smart Village** - Modul Sistem Informasi RW
 
 ---
 
-## � Tentang Aplikasi
+## 📖 Tentang Aplikasi
 
 **Smart RW Dashboard** adalah sistem informasi manajemen administrasi dan kependudukan untuk pengurus RW yang bertujuan **mendigitalisasi data warga, keuangan, dan pelayanan publik di tingkat desa**. Aplikasi ini menghubungkan pengurus RW dengan warga dalam satu ekosistem digital yang transparan, efisien, dan mudah digunakan.
 
@@ -91,28 +91,30 @@ Bagian dari Ekosistem **Smart Village** - Modul Sistem Informasi RW
 ---
 
 ## 🛠️ Teknologi
+
+### Core Stack
+- **Flutter 3.x** - Cross-platform framework
+- **Dart 3.x** - Programming language
+- **Material Design 3** - UI design system
+
+### Dependencies
+```yaml
+dependencies:
+  go_router: ^12.0.0              # Declarative routing
+  fl_chart: ^0.65.0               # Data visualization (Pie Chart)
+  google_fonts: ^6.1.0            # Poppins typography
+  intl: ^0.18.0                   # Date & number formatting
 ```
-lib/
-├── main.dart                          # Entry point + GoRouter setup
-├── routes/
-│   └── app_router.dart               # Centralized routing (6 routes)
-├── screens/                          # Feature-based screens
-│   ├── home/
-│   │   └── home_screen.dart          # Dashboard utama + statistik
-│   ├── warga/
-│   │   └── warga_screen.dart         # CRUD data kependudukan
-│   ├── surat/
-│   │   └── surat_screen.dart         # Layanan surat pengantar
-│   ├── keuangan/
-│   │   └── keuangan_screen.dart      # Laporan kas RW
-│   ├── posyandu/
-│   │   └── posyandu_screen.dart      # Data kesehatan balita
-│   └── kegiatan/
-│       └── kegiatan_screen.dart      # Agenda & jadwal kegiatan
-└── widgets/
-    └── common/
-        └── footer_rw.dart            # Reusable footer component
-```Instalasi
+
+### Architecture
+- **GoRouter** - Declarative routing
+- **Feature-based Structure** - Organized by modules
+- **Stateful Widgets** - Local state management
+- **Repository Pattern Ready** - For backend integration
+
+---
+
+## 🚀 Instalasi
 
 ### Prerequisites
 - Flutter SDK >= 3.0.0
@@ -124,7 +126,7 @@ lib/
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/your-username/smart_rw_app.git
+   git clone https://github.com/zakkutsu/smart_rw_app.git
    cd smart_rw_app
    ```
 
@@ -167,6 +169,35 @@ lib/
    # Windows Desktop
    flutter build windows --release
    ```
+
+---
+
+## 📁 Struktur Project
+
+```
+lib/
+├── main.dart                       # Entry point + GoRouter setup
+├── routes/
+│   └── app_router.dart             # Centralized routing (6 routes)
+├── screens/                        # Feature-based screens
+│   ├── home/
+│   │   └── home_screen.dart        # Dashboard utama + statistik
+│   ├── warga/
+│   │   └── warga_screen.dart       # CRUD data kependudukan
+│   ├── surat/
+│   │   └── surat_screen.dart       # Layanan surat pengantar
+│   ├── keuangan/
+│   │   └── keuangan_screen.dart    # Laporan kas RW
+│   ├── posyandu/
+│   │   └── posyandu_screen.dart    # Data kesehatan balita
+│   └── kegiatan/
+│       └── kegiatan_screen.dart    # Agenda & jadwal kegiatan
+└── widgets/
+    └── common/
+        └── footer_rw.dart          # Reusable footer component
+```
+
+**Total:** 6 screens, 6 routes, 1 reusable widget
 
 ---
 
@@ -253,9 +284,7 @@ lib/
 ## 🔒 Security & Privacy
 
 ### Implemented
-- ✅ Input validation (form  home_screen.dart
-
----fields)
+- ✅ Input validation (form fields)
 - ✅ Delete confirmation dialogs
 - ✅ Safe state management
 
@@ -277,9 +306,29 @@ lib/
 - CRUD operations ✅
 - Responsive layout ✅
 
-### Run Tests
+### Recommended Tests
 ```bash
-# AnalKontribusi
+# Run all tests
+flutter test
+
+# Coverage report
+flutter test --coverage
+
+# Analyze code quality
+flutter analyze
+
+# Check formatting
+dart format lib/
+```
+
+**Test Coverage Goals:**
+- [ ] Unit tests (Data models, Utils)
+- [ ] Widget tests (Forms, Dialogs, Cards)
+- [ ] Integration tests (Complete CRUD flow)
+
+---
+
+## 🤝 Kontribusi
 
 Kami terbuka untuk kontribusi! Berikut cara berkontribusi:
 
@@ -344,205 +393,42 @@ MIT License - Copyright (c) 2025 Smart RW Development Team
 - 📱 WhatsApp: +62 812-3456-7890 (placeholder)
 - 💬 Telegram: [@SmartRWSupport](https://t.me/smartrw) (placeholder)
 
---Dibuat dengan ❤️ untuk Kemajuan Administrasi Desa**
-
-**© 2025 Smart RW Dashboard** - Sistem Informasi RW Digital
-
-⭐ Star project ini jika bermanfaat untuk RW Anda!
-
-[⬆ Kembali ke atas 1.0.0
-- **Total Screens:** 6 (Home, Warga, Surat, Keuangan, Posyandu, Kegiatan)
-- **Total Routes:** 6 public routes
-- **Code Lines:** 1,200+ lines
-- **Dependencies:** 4 packages (go_router, fl_chart, google_fonts, intl)
-- **Supported Platforms:** Web ✅ | Android ✅ | iOS ✅ | Windows ✅ | macOS ✅ | Linux ✅
-- **Last Updated:** 30 Desember 2025
-
 ---
 
-## 🙏 Acknowledgments
+## � Acknowledgments
 
 Terima kasih kepada:
-- **Flutter Team** untuk framework yang luar biasa
-- **Komunitas Flutter Indonesia** untuk support & inspirasi
-- **Pengurus RW & RT** yang menginspirasi digitalisasi administrasi desa
-- **Pemerintah Desa** yang mendukung program Smart Village
+- Flutter Team untuk framework yang luar biasa
+- Komunitas Flutter Indonesia untuk support & inspirasi
+- Pengurus RW & RT yang menginspirasi digitalisasi administrasi desa
+- Pemerintah Desa yang mendukung program Smart Village
 - Icon dari [Material Icons](https://fonts.google.com/icons)
 - Font Poppins dari [Google Fonts](https://fonts.google.com/)
 - Charts library dari [FL Chart](https://pub.dev/packages/fl_chart)
-- Routing dari [GoRouter](https://pub.dev/packages/go_router
-   - Klik FAB "Catat Kas" → Input transaksi (coming soon)
-   - Monitoring pemasukan (↑ hijau) & pengeluaran (↓ merah)
+- Routing dari [GoRouter](https://pub.dev/packages/go_router)
 
-5. **Update Posyandu:**
-   - Klik "Posyandu" → Lihat data balita
-   - Monitor status kesehatan (Sehat / Kurang Gizi dengan color coding)
-   - Update data berkala setiap bulan
+---
 
-6. **Kelola Kegiatan:**
-   - Klik "Kegiatan RW" → Lihat agenda
-   - Events upcoming (aktif) vs past (selesai)
-   - Klik FAB → Tambah event baru (coming soon)
-   - Konfirmasi kehadiran warga
+## 📊 Project Statistics
 
----tter run -d chrome
-```
-
-Untuk Android/iOS (dengan emulator/device):
-```bash
-flutter run
-```
-
-Untuk Desktop (Windows):
-```bash
-flutter run -d windows
-```
-
-### Build untuk Production
-
-**Web**
-```bash
-flutter build web
-```
-
-**Android APK**
-```bash
-flutter build apk --release
-```
-
-**Android App Bundle**
-```bash
-flutter build appbundle --release
-```
-
-**Windows**
-```bash
-flutter build windows --release
-```
-
-## 🧪 Testing
-
-Run tests:
-```bash
-flutter test
-```
-
-Analyze code quality:
-```bash
-flutter analyze
-```
-
-Check formatting:
-```bash
-dart format lib/
-```
-
-## 🎨 Customization
-
-### Ubah Tema Warna
-
-Edit di [main.dart](lib/main.dart):
-```dart
-theme: ThemeData(
-  colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-  textTheme: GoogleFonts.poppinsTextTheme(),
-),
-```
-
-### Tambah Route Baru
-
-Tambahkan di [app_router.dart](lib/routes/app_router.dart):
-```dart
-GoRoute(
-  path: '/feature-baru',
-  builder: (context, state) => const FeatureBaruScreen(),
-),
-```
-
-### Tambah Feature Screen Baru
-
-1. Buat folder di `lib/screens/feature_baru/`
-2. Buat file `feature_baru_screen.dart`
-3. Register route di `app_router.dart`
-4. Tambah menu di dashboard
-
-## 📱 Platform Support
-
-| Platform | Status |
-|----------|--------|
-| Web | ✅ Tested |
-| Android | ✅ Ready |
-| iOS | ✅ Ready |
-| Windows | ✅ Ready |
-| macOS | ✅ Ready |
-| Linux | ✅ Ready |
-
-## 🗺️ Roadmap
-
-- [ ] **Backend Integration**: Connect ke REST API atau Firebase
-- [ ] **Authentication**: Login system untuk admin & warga
-- [ ] **Role-Based Access**: Admin, RT, Warga dengan permission berbeda
-- [ ] **Database**: Persistent storage dengan SQLite/Hive
-- [ ] **Export PDF**: Generate laporan dalam format PDF
-- [ ] **Notifications**: Push notification untuk update penting
-- [ ] **Multi-RW Support**: Support multiple RW dalam 1 app
-- [ ] **Dark Mode**: Tema gelap untuk penggunaan malam
-- [ ] **Offline Mode**: Sync data ketika koneksi kembali
-- [ ] **Analytics**: Dashboard analytics dan reporting
-
-## 🤝 Contributing
-
-Kontribusi sangat diterima! Ikuti langkah berikut:
-
-1. Fork repository ini
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
-
-### Coding Standards
-
-- Follow [Effective Dart](https://dart.dev/guides/language/effective-dart) guidelines
-- Format code dengan `dart format`
-- Run `flutter analyze` sebelum commit
-- Write meaningful commit messages
-- Update dokumentasi jika diperlukan
-
-## 🐛 Bug Reports & Feature Requests
-
-Gunakan [GitHub Issues](https://github.com/your-username/smart_rw_app/issues) untuk:
-- Laporkan bug
-- Request feature baru
-- Diskusi improvement
-
-## 📄 License
-
-Project ini dilisensikan di bawah MIT License - lihat file [LICENSE](LICENSE) untuk detail.
-
-## 👨‍💻 Authors
-
-- **Zakkutsu** - *Initial work* - [Zakkutsu](https://github.com/zakkutsu)
-
-## 🙏 Acknowledgments
-
-- Terimakasih kepada komunitas Flutter Indonesia
-- Icon dari [Material Icons](https://fonts.google.com/icons")
-- Font Poppins dari [Google Fonts](https://fonts.google.com/)
-- Charts library dari [FL Chart](https://pub.dev/packages/fl_chart)
-
-## 📞 Support & Contact
-
-- **Email**: rw05@example.com
-- **Website**: https://smartrw.example.com
+- **Version:** 1.0.0
+- **Total Screens:** 6 (Home, Warga, Surat, Keuangan, Posyandu, Kegiatan)
+- **Total Routes:** 6 public routes
+- **Code Lines:** 1,200+
+- **Dependencies:** 4 packages
+- **Supported Platforms:** Web, Android, iOS, Windows, macOS, Linux
+- **Last Updated:** 30 Desember 2025
 
 ---
 
 <div align="center">
 
-**© 2025 Smart RW Dashboard**
+**Dibuat dengan ❤️ untuk Kemajuan Administrasi Desa**
 
-Dibuat dengan ❤️ untuk kemudahan pelayanan warga
+**© 2025 Smart RW Dashboard** - Sistem Informasi RW Digital
 
-[⬆ Back to Top](#-smart-rw-dashboard)
+⭐ Star project ini jika bermanfaat untuk RW Anda!
+
+[⬆ Kembali ke atas](#-smart-rw-dashboard)
 
 </div>
