@@ -173,7 +173,43 @@ lib/
 ## 🎮 Cara Menggunakan
 
 ### Sebagai Pengurus RW (Admin)
-🗺️ Roadmap
+
+1. **Dashboard Overview:**
+   - Buka aplikasi → Lihat statistik ringkas
+   - Cek grafik demografi warga
+   - Monitor surat pengantar terbaru
+   - Navigasi ke fitur via menu grid
+
+2. **Kelola Data Warga:**
+   - Klik "Data Warga" → Lihat daftar penduduk
+   - **Tambah Warga:** Klik FAB → Isi form (Nama, NIK, Status, Pekerjaan) → Simpan
+   - **Edit Data:** PopupMenu → Edit → Update form → Simpan
+   - **Hapus Data:** PopupMenu → Hapus → Konfirmasi
+
+3. **Proses Surat:**
+   - Klik "Surat" → Lihat list pengajuan
+   - Tap chip status → Pilih: Disetujui / Ditolak / Pending
+   - Status terupdate real-time
+
+4. **Catat Keuangan:**
+   - Klik "Keuangan" → Lihat saldo kas
+   - Klik FAB "Catat Kas" → Input transaksi (coming soon)
+   - Monitoring pemasukan (↑ hijau) & pengeluaran (↓ merah)
+
+5. **Update Posyandu:**
+   - Klik "Posyandu" → Lihat data balita
+   - Monitor status kesehatan (Sehat / Kurang Gizi dengan color coding)
+   - Update data berkala setiap bulan
+
+6. **Kelola Kegiatan:**
+   - Klik "Kegiatan RW" → Lihat agenda
+   - Events upcoming (aktif) vs past (selesai)
+   - Klik FAB → Tambah event baru (coming soon)
+   - Konfirmasi kehadiran warga
+
+---
+
+## 🗺️ Roadmap
 
 ### ✅ Version 1.0.0 (Current) - Core Features Complete
 - [x] Dashboard eksekutif dengan statistik
